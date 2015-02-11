@@ -9,6 +9,7 @@
 
   {% for article in articles_page.object_list %}
     <article>
+      <span>{% if article.pin %}<i class="glyphicon glyphicon-pushpin"></i>{% endif %}</span>
       <header>
         <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags|e }}">{{ article.title }}</a></h2>
       </header>
