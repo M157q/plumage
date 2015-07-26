@@ -2,6 +2,7 @@
   <a href="{{ SITEURL }}/{{ tag.url }}" data-toggle="tooltip"
       class="label label-default"
       title="{{ tag.articles }} article{{ 's' if tag.articles > 1 else '' }} with this tag">{{ tag.name }}</a>
+  <br>
 {%- endmacro %}
 
 {% macro render_link_icon(link, label, favicon=True) -%}
