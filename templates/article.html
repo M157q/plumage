@@ -19,6 +19,10 @@
 
     <p><abbr title="{{ article.date.isoformat() }}"><i class="fa fa-calendar"></i> {{ article.locale_date }}</abbr></p>
 
+    {% if article.modified %}
+      <p><abbr title="{{ article.modified.isoformat() }}"><i class="fa fa-pencil"></i>{{ article.locale_modified }}</abbr></p>
+    {% endif %}
+
     {% if AUTHOR_SAVE_AS and article.authors %}
       <p><address>
         <i class="fa fa-user"></i> By
