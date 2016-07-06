@@ -128,11 +128,16 @@
   {% if SITEURL and DISQUS_SITENAME %}
     <div class="comments">
       <div id="disqus_thread"></div>
-      <script type="text/javascript">
+	  <script type="text/javascript">
         var disqus_shortname = '{{ DISQUS_SITENAME }}';
         var disqus_identifier = "{{ article.url }}";
         var disqus_title = "{{ article.title|striptags|e }}";
         var disqus_url = "{{ SITEURL }}/{{ article.url }}";
+
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+        };
         (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
