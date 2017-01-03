@@ -97,6 +97,9 @@
   {% import 'translations.html' as translations with context %}
   {{ translations.translations_for(article) }}
 
+  <blockquote>
+    {{ article.summary }}
+  </blockquote>
   <div>
     {{ article.content }}
   </div>
