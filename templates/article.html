@@ -117,26 +117,7 @@
     </section>
   {% endif %}
 
-  {% if DONATION %}
-    <hr>
-    <section id="donation">
-        <h3>Donation</h3>
-        <p id="donation-chinese">
-          如果覺得這篇文章對你有幫助，
-          除了留言讓我知道外，
-          或許也可以考慮請我喝杯咖啡，
-          不論金額多寡我都會非常感激且能鼓勵我繼續寫出對你有幫助的文章。
-        </p>
-        <p id="donation-english">
-          If this blog post happens to be helpful to you, besides of leaving a reply, you may consider buy me a cup of coffee to support me. It would help me write more articles helpful to you in the future and I would really appreciate it.
-        </p>
-        <ul id="donation-address">
-            {% if DONATION['bitcoin'] %}
-                <li>Bitcoin: <a href="https://blockchain.info/address/{{DONATION['bitcoin']}}">{{DONATION['bitcoin']}}</a></li>
-            {% endif %}
-        </ul>
-    </section>
-  {% endif %}
+  {% include 'donation.html' %}
 
   {% if article.related_posts %}
     <hr>

@@ -1,0 +1,32 @@
+{% if DONATIONS %}
+<hr>
+<section id="donation">
+    <h3>Donation</h3>
+    <p id="donation-chinese">
+      如果覺得這篇文章對你有幫助，
+      除了留言讓我知道外，
+      或許也可以考慮請我喝杯咖啡，
+      不論金額多寡我都會非常感激且能鼓勵我繼續寫出對你有幫助的文章。
+    </p>
+    <p id="donation-english">
+      If this blog post happens to be helpful to you, besides of leaving a reply, you may consider buy me a cup of coffee to support me. It would help me write more articles helpful to you in the future and I would really appreciate it.
+    </p>
+    <ul id="donation-address">
+        {% if DONATIONS['paypalme'] %}
+			<li><a href="https://www.paypal.me/{{DONATIONS['paypalme']}}">PayPal</a></li>
+        {% endif %}
+
+        {% if DONATIONS['btc'] %}
+			<li>BTC: <a href="https://blockchain.info/address/{{DONATIONS['btc']}}">{{DONATIONS['btc']}}</a></li>
+        {% endif %}
+
+        {% if DONATIONS['eth'] %}
+			<li>ETH: <a href="https://etherscan.io/address/{{DONATIONS['eth']}}">{{DONATIONS['eth']}}</a></li>
+        {% endif %}
+
+        {% if DONATIONS['ltc'] %}
+			<li>LTC: <a href="https://chainz.cryptoid.info/ltc/address.dws?{{DONATIONS['ltc']}}.htm">{{DONATIONS['ltc']}}</a></li>
+        {% endif %}
+    </ul>
+</section>
+{% endif %}
