@@ -12,6 +12,10 @@
       If this blog post happens to be helpful to you, besides of leaving a reply, you may consider buy me a cup of coffee to support me. It would help me write more articles helpful to you in the future and I would really appreciate it.
     </p>
     <ul id="donation-address">
+        {% if DONATIONS['opay-broadcaster-donate'] %}
+			<li><a href="https://payment.opay.tw/Broadcaster/Donate/{{DONATIONS['opay-broadcaster-donate']}}">歐付寶</a></li>
+        {% endif %}
+
         {% if DONATIONS['paypalme'] %}
 			<li><a href="https://www.paypal.me/{{DONATIONS['paypalme']}}">PayPal</a></li>
         {% endif %}
