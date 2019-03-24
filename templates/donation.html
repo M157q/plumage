@@ -17,7 +17,7 @@
         {% endif %}
 
         {% if DONATIONS['paypalme'] %}
-			<li><a href="https://www.paypal.me/{{DONATIONS['paypalme']}}">PayPal</a></li>
+        <li><a href="https://www.paypal.me/{{DONATIONS['paypalme']['id']}}/{{DONATIONS['paypalme']['amount']}}{{DONATIONS['paypalme']['currency']}}">PayPal</a></li>
         {% endif %}
 
         {% if DONATIONS['btc'] %}
