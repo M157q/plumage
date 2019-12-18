@@ -24,8 +24,20 @@
 			<li>BTC: <a href="https://blockchain.info/address/{{DONATIONS['btc']}}">{{DONATIONS['btc']}}</a></li>
         {% endif %}
 
+        {% if DONATIONS['usdt-omni'] %}
+			<li>USDT Omni: <a href="https://blockchain.info/address/{{DONATIONS['usdt-omni']}}">{{DONATIONS['usdt-omni']}}</a></li>
+        {% endif %}
+
         {% if DONATIONS['eth'] %}
 			<li>ETH: <a href="https://etherscan.io/address/{{DONATIONS['eth']}}">{{DONATIONS['eth']}}</a></li>
+        {% endif %}
+
+        {% if DONATIONS['usdt-erc20'] %}
+			<li>USDT ERC20: <a href="https://etherscan.io/address/{{DONATIONS['usdt-erc20']}}">{{DONATIONS['usdt-erc20']}}</a></li>
+        {% endif %}
+
+        {% if DONATIONS['dai'] %}
+			<li>DAI: <a href="https://etherscan.io/address/{{DONATIONS['dai']}}">{{DONATIONS['dai']}}</a></li>
         {% endif %}
 
         {% if DONATIONS['ltc'] %}
