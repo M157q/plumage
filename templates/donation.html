@@ -16,6 +16,10 @@
 			<li><a href="https://payment.opay.tw/Broadcaster/Donate/{{DONATIONS['opay-broadcaster-donate']}}">歐付寶</a></li>
         {% endif %}
 
+        {% if DONATIONS['buy_me_a_coffee'] %}
+        <li><a href="https://buymeacoffee.com/{{DONATIONS['buy_me_a_coffee']}}">Buy Me a Coffee</a></li>
+        {% endif %}
+
         {% if DONATIONS['paypalme'] %}
         <li><a href="https://www.paypal.me/{{DONATIONS['paypalme']['id']}}/{{DONATIONS['paypalme']['amount']}}{{DONATIONS['paypalme']['currency']}}">PayPal</a></li>
         {% endif %}
